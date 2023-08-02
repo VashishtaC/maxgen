@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MeraCACS - Your Solution Provider</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f8f5;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #1769aa;
+            background-image: url('static/photo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 10px 0;
+            background-color: #1769aa;
+            background-image: url('static/photo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #005b8a;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1769aa;
+            background-image: url('static/photo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 10px 0;
+            z-index: 1;
+        }
+
+        nav ul li.active > ul {
+            display: block;
+        }
+
+        nav ul ul li {
+            width: auto;
+            display: inline-block;
+        }
+
+        nav ul ul li a {
+            color: #000;
+            padding: 5px 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #009688;
+            color: #fff;
+        }
+
+
+        @media screen and (max-width: 768px) {
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            nav ul ul {
+                position: static;
+                display: block;
+            }
+
+            nav ul ul li {
+                display: block;
+            }
+        }
+    </style>
+
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdowns = document.querySelectorAll("nav ul li");
+            dropdowns.forEach((dropdown) => {
+                dropdown.addEventListener("click", function () {
+                    this.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div>
+            <p>+91 98988 34328</p>
+        </div>
+        <div>
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+            <a href="https://twitter.com/" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/" target="_blank">Linkedin</a>
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+        </div>
+    </header>
+
+
+   <nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li>
+            <a href="#">Services</a>
+            <ul>
+                <li><a href="import_export_code.html" target="_blank">Import and Export Code</a></li>
+                <li><a href="startup_registration.html" target="_blank">Startup Registration</a></li>
+                <li><a href="payment.html" target="_blank">Payment</a></li>
+            </ul>
+        </li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+</nav>
+
+
+
+    </section>
+
+
+
+    <section id="home">
+        <h1>Welcome to MeraCACS</h1>
+
+        <h2>WHAT WE BELIEVE</h2>
+        <p>
+            Our motive is to provide you instant and effective solutions with our own insights derived from the empirical knowledge, experiences, and expertise gained over a period of time. MERA CACS have a team of qualified professionals who drive the companies towards an integration of technology with traditional practices in an autonomous world of law. We provide an online platform and offline support to our valuable customers for their business registration, business maintenance, and its legal compliances as well. Using these invaluable insights, we want to give commitment to excellence and focused effort towards your problems regardless of its complexity.
+        </p>
+
+        <h2>OUR SERVICES</h2>
+        <ul>
+            <li>
+                <strong>COMPANY FORMATION:</strong> Considering registering a company in India and that too in a fast and hassle-free manner.
+            </li>
+            <li>
+                <strong>GOODS & SERVICE TAX (GST):</strong> GST is a huge tax reform in India post-Independence.
+            </li>
+            <li>
+                <strong>TRADEMARK / PATENT:</strong> A trademark is typically a name, word, phrase, logo, symbol, design, image.
+            </li>
+            <li>
+                <strong>INCOME TAX:</strong> Pay your Income Tax using our fast and hassle-free services.
+            </li>
+            <li>
+                <strong>TRUST REGISTRATION:</strong> Looking for Trust Registration? Our Service Expert will help you with Registration.
+            </li>
+            <li>
+                <strong>IMPORT / EXPORT LICENSE:</strong> Import/Export Licence for importing or exporting goods and services from India.
+            </li>
+            <li>
+                <strong>ISO STANDARD / CERTIFICATION:</strong> Get an International recognized ISO certificate for brand building using ISO logo.
+            </li>
+            <li>
+                <strong>CO-OPERATIVE SOCIETY:</strong> Registration Services for a co-operative housing society as a legal entity.
+            </li>
+            <li>
+                <strong>DIGITAL SIGNATURE (DSC):</strong> Digital signature registration for verifying the authenticity of digital documents.
+            </li>
+            <li>
+                <strong>MSME - Udyam Registration:</strong> Micro, Small & Medium Enterprises (MSME) Registration Services.
+            </li>
+            <li>
+                <strong>Startup Registration:</strong> Startup India initiative eligible companies can get recognized as Startups by DPIIT.
+            </li>
+            <li>
+                <strong>Book Keeping & Accounting:</strong> Services for petty cash book, suppliers ledger, customer ledger & Bookkeeping.
+            </li>
+        </ul>
+    </section>
+
+
+    <section id="testimonials">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div style="width: 48%;">
+                <h2>TESTIMONIALS</h2>
+                <div>
+                    <p>We are with MeraCACS from long time when they first help us to navigate our business plan Gujarat Technologies Partnership Firm to move Private Limited Company Honeybell. At MeraCACS, dedicated people at custom accounting work as hard work for our company as if they were my own staff. They help me stay in compliance and keep me on top of changing tax & employment law. Thanks for Your Support & Services.</p>
+                    <p>- Honey Bell</p>
+                    <p>I have been using the services of Mera CACS for my Income tax returns, since last 5 years and i am very happy with their services. Mr Prakash Ramvani is thorough professional and very knowledgeable about income tax, GST and Trademark matters. I have recommended him to my family and friends and they are also very happy with the services of Mera CACS.</p>
+                    <!-- Add more testimonials here as needed -->
+                </div>
+            </div>
+            <div style="width: 48%;">
+                <h2>IMPORTANT DATES</h2>
+                <div>
+
+                    <p>June 2023</p>
+                    <table>
+                        <tr>
+                            <th>SUN</th>
+                            <th>MON</th>
+                            <th>TUE</th>
+                            <th>WED</th>
+                            <th>THU</th>
+                            <th>FRI</th>
+                            <th>SAT</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                        </tr>
+
+                        <tr>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                        </tr>
+
+                        <tr>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>31</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Contact Email: info@meracacs.com</p>
+    </section>
+
+
+    <footer>
+        <p>Address: C-507, The First, Nr. ITC Hotel, B/h Keshav Baugh Party Plot, Vastrapur, Ahmedabad, Gujarat 380015</p>
+        <p>Phone: +91 98988 34328</p>
+        <p>Email: info@meracacs.com</p>
+        <p>Website: www.meracacs.com</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment Form</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .form-header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: dodgerblue;
+        }
+
+        .form-submit {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-submit:hover {
+            background-color: #2196F3;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1 class="form-header">Payment Form</h1>
+        <form id="paymentForm">
+
+            <label for="deliveryOptions">Please select Delivery options</label>
+            <select id="deliveryOptions" class="form-input">
+                <option value="Cash on Delivery">Cash on Delivery</option>
+                <option value="Free delivery">Free delivery (On orders above 200)</option>
+                <option value="One Day Delivery">One Day Delivery (Rs 150 extra)</option>
+            </select>
+
+
+            <label >Payment Method</label>
+            <input type="radio" id="paymentMethodCredit" name="paymentMethod" value="Credit Card" />
+            <label for="paymentMethodCredit">Credit Card</label>
+            <input type="radio" id="paymentMethodPayPal" name="paymentMethod" value="PayPal" checked />
+            <label for="paymentMethodPayPal">PayPal</label>
+
+
+            <label for="firstName">Buyer Name</label>
+            <input type="text" id="firstName" class="form-input" placeholder="First Name" />
+            <input type="text" id="lastName" class="form-input" placeholder="Last Name" />
+
+
+            <label for="buyerEmail">Buyer E-mail</label>
+            <input type="email" id="buyerEmail" class="form-input" placeholder="ex: myname@example.com" />
+
+
+            <label for="streetAddress">Shipping Address</label>
+            <input type="text" id="streetAddress" class="form-input" placeholder="Street Address" />
+            <input type="text" id="streetAddressLine2" class="form-input" placeholder="Street Address Line 2" />
+            <input type="text" id="city" class="form-input" placeholder="City" />
+            <input type="text" id="stateProvince" class="form-input" placeholder="State / Province" />
+            <input type="text" id="postalCode" class="form-input" placeholder="Postal / Zip Code" />
+
+
+            <button type="submit" class="form-submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+
+        const form = document.getElementById('paymentForm');
+        form.onsubmit = function (event) {
+            event.preventDefault();
+            if (validateForm()) {
+                form.submit();
+            }
+        };
+
+        function validateForm() {
+            const deliveryOptions = document.getElementById('deliveryOptions').value;
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const buyerEmail = document.getElementById('buyerEmail').value;
+            const streetAddress = document.getElementById('streetAddress').value;
+            const city = document.getElementById('city').value;
+            const stateProvince = document.getElementById('stateProvince').value;
+            const postalCode = document.getElementById('postalCode').value;
+
+            if (!deliveryOptions) {
+                alert('Please select a delivery option.');
+                return false;
+            }
+            if (!firstName.trim()) {
+                alert('Please enter your first name.');
+                return false;
+            }
+            if (!lastName.trim()) {
+                alert('Please enter your last name.');
+                return false;
+            }
+            if (!buyerEmail.trim()) {
+                alert('Please enter your email address.');
+                return false;
+            }
+            if (!isValidEmail(buyerEmail)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+            if (!streetAddress.trim()) {
+                alert('Please enter your street address.');
+                return false;
+            }
+            if (!city.trim()) {
+                alert('Please enter your city.');
+                return false;
+            }
+            if (!stateProvince.trim()) {
+                alert('Please enter your state/province.');
+                return false;
+            }
+            if (!postalCode.trim()) {
+                alert('Please enter your postal/zip code.');
+                return false;
+            }
+
+            return true;
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+</body>
+
+</html>
